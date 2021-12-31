@@ -17,7 +17,8 @@ $ npm run start
 Server starts on `http://localhost:3000`
 After the program starts it begins to request last 100 blocks on etherscan api. It takes about 25 seconds, then you can access to 3 endpoints:
 
-- `http://localhost:3000` If transactions are loaded it returns object with wallet with highest value. The return type is like below
+- `http://localhost:3000` If transactions are loaded it returns object with wallet with highest value. The return type is like below. In other case returns an error
+
 ```
 {
   wallet : "walletAddress",
@@ -25,7 +26,5 @@ After the program starts it begins to request last 100 blocks on etherscan api. 
   ethValue : 0.000000000002237}
 }
 ```
-In other case returns an error
-
 - `http://localhost:3000/transactions` If transactions are loaded it returns an array with transactions of last 100 blocks. In other case returns an error
 - `http://localhost:3000/wallets` If transactions are loaded it returns an array with wallet and it's absolute sum of transaction values. In other case returns an error
